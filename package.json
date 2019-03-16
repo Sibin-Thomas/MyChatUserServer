@@ -1,0 +1,25 @@
+{
+  "name": "mychatuserserver",
+  "version": "1.0.0",
+  "description": "This server will be used to cater to services pertaining to user details",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sibin-Thomas/MyChatUserServer.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "Sibin Thomas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sibin-Thomas/MyChatUserServer/issues"
+  },
+  "homepage": "https://github.com/Sibin-Thomas/MyChatUserServer#readme",
+  "dependencies": {
+    "npm": "^6.9.0"
+  }
+}
