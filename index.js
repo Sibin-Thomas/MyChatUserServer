@@ -10,7 +10,7 @@ app.use(cors());
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended:true}));
 
-var connectionString = 'mongodb://localhost:27017/mychatdb';
+var connectionString = 'mongodb+srv://thomas:st654321@cluster0-8krio.mongodb.net/test?retryWrites=true/mychatdb';
 
 mongoose.connect(connectionString,{useNewUrlParser:true},(err)=>{
 	if (err) throw err;
@@ -19,7 +19,7 @@ mongoose.connect(connectionString,{useNewUrlParser:true},(err)=>{
 
 app.use('/usr',usrRoutes);
 
-var PORT = 8000;
+var PORT = 8000 || process.env.PORT;
 
 app.listen(PORT,()=>{
 	console.log('User Server Running');
