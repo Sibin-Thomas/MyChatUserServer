@@ -19,7 +19,7 @@ mongoose.connect(connectionString,{useNewUrlParser:true},(err)=>{
 
 app.use('/usr',usrRoutes);
 
-var PORT = 8000 || process.env.PORT;
+var PORT = process.env.PORT || 8000;
 
 app.listen(PORT,()=>{
 	console.log('User Server Running');
