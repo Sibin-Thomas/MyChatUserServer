@@ -26,14 +26,14 @@ router.delete('/removeUser',(req,res)=>{
 	});
 })
 
-router.get('/authUser',(req,res)=>{
-	User.findOne({username:req.headers.username},(err,user)=>{
+router.post('/authUser',(req,res)=>{
+	User.findOne({username:req.body.username},(err,user)=>{
 		if(err)
 			console.log(err);
 		if(user==null)
 			res.send('User Doesnt Exist');
 		else
-			User.findOne({username:req.headers.username,password:req.headers.password},(err,user)=>{
+			User.findOne({username:req.body.username,password:req.body.password},(err,user)=>{
 				if(err)
 					console.log(err);
 				if(user==null)
